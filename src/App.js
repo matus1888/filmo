@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import "./App.scss"
+import Header from "./Components/Header/Header";
+import Menu from "./Components/Menu/Menu";
+import Banner from "./Components/Banner/Banner";
+import Choise from "./Components/Choise/Choise";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = (props) => {
+    return (
+        <>
+            {props.burger && <div className={"modal-window"} onClick={props.toggleBurger}></div>}
+            <Header/>
+            <div className="container">
+                <div className={"main-container"}>
+                    {props.burger && <Menu className="menu"></Menu>}
+                    <div className="no-menu__container">
+                        <Banner></Banner>
+                        <Choise></Choise>
+                        {/*    <Look className="block__look__and__choiсe_and__trailers"></Look>*/}
+                        {/*    <Advertising className="advertising"></Advertising>*/}
+                        {/*    <Main className="main"></Main>*/}
+                        {/*    <Calendar className="calendar__cashes"></Calendar>*/}
+                        {/*    <Cashes className="calendar__cashes"></Cashes>*/}
+                    </div>
+                </div>
+            </div>
+            {/*<Footer className="footer"></Footer>*/}
+            </>
+    );
+};
 
 export default App;
