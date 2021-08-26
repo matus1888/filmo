@@ -4,6 +4,9 @@ import Header from "./Components/Header/Header";
 import Menu from "./Components/Menu/Menu";
 import Banner from "./Components/Banner/Banner";
 import Choise from "./Components/Choise/Choise";
+import Look from "./Components/Look/Look";
+import Advertising from "./Components/Advertising/Advertising";
+import Main from "./Components/Main/Main";
 
 const App = (props) => {
     return (
@@ -16,16 +19,16 @@ const App = (props) => {
                     <div className="no-menu__container">
                         <Banner></Banner>
                         <Choise></Choise>
-                        {/*    <Look className="block__look__and__choiсe_and__trailers"></Look>*/}
-                        {/*    <Advertising className="advertising"></Advertising>*/}
-                        {/*    <Main className="main"></Main>*/}
+                        <Look></Look>
+                        <Advertising></Advertising>
+                        <Main></Main>
                         {/*    <Calendar className="calendar__cashes"></Calendar>*/}
                         {/*    <Cashes className="calendar__cashes"></Cashes>*/}
                     </div>
                 </div>
             </div>
             {/*<Footer className="footer"></Footer>*/}
-            </>
+        </>
     );
 };
 
