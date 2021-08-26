@@ -7,6 +7,9 @@ import Choise from "./Components/Choise/Choise";
 import Look from "./Components/Look/Look";
 import Advertising from "./Components/Advertising/Advertising";
 import Main from "./Components/Main/Main";
+import Calendar from "./Components/Calendar/Calendar";
+import Cashes from "./Components/Cashes/Cashes";
+import Footer from "./Components/Footer/Footer";
 
 const App = (props) => {
     return (
@@ -22,12 +25,12 @@ const App = (props) => {
                         <Look></Look>
                         <Advertising></Advertising>
                         <Main></Main>
-                        {/*    <Calendar className="calendar__cashes"></Calendar>*/}
-                        {/*    <Cashes className="calendar__cashes"></Cashes>*/}
+                        <Calendar></Calendar>
+                            <Cashes />
                     </div>
                 </div>
             </div>
-            {/*<Footer className="footer"></Footer>*/}
+            <Footer></Footer>
         </>
     );
 };
